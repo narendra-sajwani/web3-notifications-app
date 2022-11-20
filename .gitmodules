@@ -1,3 +1,3 @@
 [submodule "frontend-react-wagmi"]
 	path = frontend-react-wagmi
-	url = ./
+	url = https://github.com/narendra-sajwani/web3-notifications-frontend
