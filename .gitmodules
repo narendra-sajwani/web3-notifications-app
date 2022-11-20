@@ -1,0 +1,3 @@
+[submodule "frontend-react-wagmi"]
+	path = frontend-react-wagmi
+	url = ./
