@@ -1,0 +1,35 @@
+enum ChannelState {
+  ACTIVE
+  MUTED
+  DELETED
+}
+
+type NotificationMessage @entity {
+  id: ID!
+  channelId: BigInt!
+  admin: Bytes!
+  recipient: Bytes!
+  message: String!
+}
+
+type Channel @entity {
+  id: ID!
+  admin: Bytes!
+  channelName: String!
+  channelDescription: String!
+  channelState: ChannelState!
+  channelId: BigInt!
+}
+
+type NotificationEvent @entity {
+  id: ID!
+  notification: NotificationMessage!
+}
+
+type ChannelCreated @entity {
+  id: ID!
+  channelId: BigInt!
+  admin: Bytes!
+  channelName: String!
+  channelDescription: String!
+}
